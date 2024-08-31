@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.contanier{
+    min-height: 100vh;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+.contanier .box{
+    width: 100%;
+}
+.contanier header{
+    margin-top: 40px;
+}
+.contanier .box div h1{
+    font-family: "Baskervville SC", serif;
+    font-size: 48px;
+    font-weight: 700;
+    text-wrap: wrap;
+    margin-top: 20px;
+}
+.contanier .box form{
+    margin-top: 40px;
+}
+input {
+    border: 2px solid rgb(109, 103, 103);
+    outline: 0;
+    color: rgb(109, 103, 103);
+    background: transparent;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0.25rem;
+    min-width: 500px;
+    padding: 15px;
+    transition: border-color 0.2s ease-out;
+  }
+  input:hover{
+    border-color: #8BB9FF;
+  }
+  .contanier .box form{
+    text-align: left;
+
+  }
+  .contanier .box form a{
+    color: #8BB9FF;
+    font-size: 15px;
+    font-weight:400;
+  }
+  .contanier .box form a:hover{
+    color: #4f92f7;
+  }
+  .contanier .box form .btn button{
+    margin: 30px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    background: #8BB9FF;
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.5s ease;
+  }
+  .contanier .box form .btn button:hover {
+    background-color: #4f92f7;
+  }
+
+  .contanier .box .signup-options{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 35px;
+    width: 300px;
+    margin: 50px auto;
+  }
+  .contanier .box .signup-options .option{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 30px;
+    padding: 12px;
+    border: 1px solid rgb(146, 138, 138);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .contanier .box .signup-options .option:hover{
+    border-color: white;
+  }
+  .contanier .box .signup-options .option label{
+    margin-top: 5px;
+  }
+  .contanier .box .signup-options .option p img{
+    width: 30px;
+    height: 30px;
+    margin-left: -20px;
+  }
+  .contanier .box .login-link{
+    margin-top: 30px;
+  }
+  .contanier .box footer{
+    margin-top: 30px;
+    padding-bottom: 40px;
+  }
+  .hr-text {
+    border: 0;
+    font-size: 14px;
+    height: 1.5em;
+    line-height: 1em;
+    position: relative;
+    text-align: center;
+  }
+  .hr-text::before {
+    content: "";
+    background: linear-gradient(to right, transparent, black, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+}
+.hr-text::after {
+    background-color: white;
+    color: black;
+    content: attr(data-content);
+    line-height: 1.5em;
+    padding: 0 7px;
+    position: relative;
+}
