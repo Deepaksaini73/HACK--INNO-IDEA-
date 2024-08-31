@@ -62,3 +62,32 @@ function trackYourSpending(){
     Value-Based Spending: Align your spending with your values. If something doesn't add value to your life, consider cutting it from your budget.</p>
     `;
     }
+
+
+    function adviseChange(){
+    let adviseNo=Math.floor(Math.random()*6);
+
+    switch (adviseNo) {
+        case 0:
+            trackYourSpending();
+          break;
+        case 1:
+            SetFinancialGoals();
+          break;
+        case 2:
+            AvoidHighInterestDebt();
+          break;
+        case 3:
+            CreateaBudge();
+          break;
+        case 4:
+            Savings();
+          break;
+        case 5:
+            QualityofLife();
+          break;
+
+        default:
+          console.log(`Sorry, we are out of ${adviseNo}.`);
+      }
+    }

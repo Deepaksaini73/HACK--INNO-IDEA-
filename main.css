@@ -91,12 +91,13 @@ form{
 #userForm .box{
     width: 680px;
     height: 55px;
-    padding: 12px;
+    padding: 15px;
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
     background: whitesmoke;
 }
+
 #userForm .box select{
     background: white;
     padding: 4px;
@@ -112,7 +113,7 @@ form{
     background: white;
     padding: 10px;
     width: 100%;
-    height: 60px;
+    height:47px;
 }
 #userForm button{
     background: rgb(128, 181, 128);
@@ -222,6 +223,7 @@ form{
     padding: 20px 40px;
     background: #00002c;
 }
+
 .footer-section .footer .footer-links{
     display: flex;
     justify-content: space-between;
