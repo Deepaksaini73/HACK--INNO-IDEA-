@@ -43,10 +43,8 @@ async function generateBotResponse(userInput) {
         const apiResponse = data?.candidates[0].content.parts[0].text;
         console.log('API Response:', apiResponse);
 
-        // Assuming the API returns contents array with parts array inside
         let botResponse = "";
 
-        // Check if the structure matches what we expect
         if (apiResponse) {
             botResponse = apiResponse;
         } else {
@@ -62,3 +60,9 @@ async function generateBotResponse(userInput) {
     chatBox.appendChild(botMsg);
     chatBox.scrollTop = chatBox.scrollHeight;
 }
+
+document.getElementById('user-input').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        document.getElementById('send-btn').click();
+    }
+});

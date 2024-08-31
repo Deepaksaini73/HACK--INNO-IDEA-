@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic AI Chatbot</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Chatbot UI</title>
+    <link rel="stylesheet" href="chatbot-style.css">
 </head>
 <body>
-    <div class="chat-container">
-        <div id="chat-box" class="chat-box"></div>
-        <div class="user">
-            <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off">
+    <div class="chatbot-container">
+        <div class="chat-header">
+            <div class="avatar">
+                <img src="images/chatbot.png" alt="Avatar">
+            </div>
+            <div class="chat-info">
+                <h2>Chat With Information Hub</h2>
+                <p>We're online</p>
+            </div>
+            <div class="settings-button">⚙️</div>
+        </div>
+        <div class="chat-messages" id="chat-box">
+            <div class="bot">Ask anyhing here </div>
+            <!-- Messages will be appended here -->
+        </div>
+        <div class="message-input">
+            <input type="text" id="user-input" placeholder="Enter your message...">
             <button id="send-btn">Send</button>
         </div>
-    </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+        <script src="script-chatbot.js"></script>
+    </div>
