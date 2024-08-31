@@ -1,14 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
 // bottom 
 
 function trackYourSpending(){
