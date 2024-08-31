@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 document.querySelector('.chatbot-icon-box').addEventListener('click', function() {
   window.location.href = 'chatbot.html'; // Replace 'new-page.html' with your target URL
 });
@@ -11,8 +11,7 @@ document.querySelector('.chatbot-icon-box').addEventListener('click', function()
 
 
 
-=======
->>>>>>> 4196043c9da6085386906f704cd59efdb820d7e5
+
 
 // bottom 
 
