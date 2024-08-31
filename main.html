@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <title>Smart Budget Advisor</title>
 </head>
+
 <body>
 
     <header class="header">
         <div class="logo">
-            <h2>Smart  Budget  Advisor </h2>
+            <h2>Smart Budget Advisor </h2>
         </div>
 
         <div class="nav-right">
@@ -24,7 +28,7 @@
                     <li><a href="">Contact Us </a></li>
                 </ul>
             </div>
-    
+
             <div class="search-input-box">
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
                 <input type="search" name="search-input" id="search-input">
@@ -36,44 +40,58 @@
 
     <form id="userForm">
         <div class="project-type-box box">
-        <label for="projectType">What is the type of your project?</label>
 
-        <select id="projectType" name="projectType" required>
-            <option value="" selected>Select your project type</option>
-            <option value="personal">Personal</option>
-            <option value="commercial">Commercial</option>
-        </select>
-    </div>
-        <br><br>
+            <label for="projectType">What is the type of your project?</label>
+            <select id="projectType" name="projectType" required>
+                <option value="" selected>Select your project type</option>
+                <option value="personal">Personal</option>
+                <option value="commercial">Commercial</option>
+            </select>
+        </div>
+        <br>
 
         <!-- Organization Type Dropdown -->
-         <div class="orgna-type-box box">
-        <label for="organizationType">What is the type of your organization?</label>
-        <select id="organizationType" name="organizationType" required>
-            <option value=""  selected>Select your organization type</option>
-            <option value="personal">Personal</option>
-            <option value="public">Public</option>
-        </select>
-    </div>
-        <br><br>
+        <div class="orgna-type-box box">
+            <label for="organizationType">What is the type of your organization?</label>
+            <select id="organizationType" name="organizationType" required>
+                <option value="" selected>Select your organization type</option>
+                <option value="personal">Personal</option>
+                <option value="public">Public</option>
+            </select>
+        </div>
+        <br>
 
         <!-- Budget Input -->
-         <div class="budgect-box box">
-        <label for="budget">What is your budget?</label>
-        <input type="number" id="budget" name="budget" placeholder="Enter your budget" required>
-        </div><br><br>
+        <div class="budgect-box box">
+            <label for="budget">What is your budget?</label>
+            <input type="number" id="budget" name="budget" placeholder="Enter your budget" required>
+        </div><br>
 
         <!-- Location Input -->
-         <div class="location-box box">
-        <label for="location">Location:</label>
-        <input type="text" id="location" name="location" placeholder="Enter your location" required>
-        </div><br><br>
+        <div class="location-box box">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter your project location" required>
+        </div><br>
+
+
+        <div class="area-box box">
+            <label for="location">Area</label>
+            <input type="text" id="location" name="location" placeholder="Area in squre feet" required>
+        </div>
+        <br>
+
+
+        <div class="timeline-box box">
+            <label for="location">Time line:</label>
+            <input type="text" id="location" name="location" placeholder="Tentative deadline" required>
+        </div><br>
 
         <!-- Additional Input (Optional) -->
-         <div class="dis-box box">
-        <label for="additionalInfo">Additional Information:</label>
-        <textarea id="additionalInfo" name="additionalInfo" placeholder="Enter any additional information here"></textarea>
-        </div><br><br>
+        <div class="dis-box box">
+            <label for="additionalInfo">Additional Information:</label>
+            <textarea id="additionalInfo" name="additionalInfo"
+                placeholder="Enter any additional information here"></textarea>
+        </div><br>
 
         <button type="submit">Submit</button>
     </form>
@@ -93,7 +111,8 @@
             <button id="advise-prev" onclick="adviseChange()"><i class="fa-solid fa-chevron-left"></i></button>
             <div class="display-advise">
                 <h2>Track Your Spending</h2>
-                <p>Regularly review your expenses to identify spending patterns and areas where you can cut back. Tracking your spending helps you stay within budget and ensures you're using your money wisely.</p>
+                <p>Regularly review your expenses to identify spending patterns and areas where you can cut back.
+                    Tracking your spending helps you stay within budget and ensures you're using your money wisely.</p>
             </div>
             <button id="advise-next" onclick="adviseChange()"><i class="fa-solid fa-chevron-right "></i></button>
 
@@ -143,7 +162,7 @@
                         <li><a href="">Free Mobile App</a></li>
                     </ul>
                 </div>
-                
+
 
                 <div class="social-links">
                     <i class="fa-brands fa-facebook"></i>
@@ -157,13 +176,14 @@
 
     </div>
 
-<div class="chatbot-icon-box">
-    <div class="chatbot-img"><img src="images/chatbot.png" alt=""></div>
-</div>
+    <div class="chatbot-icon-box">
+        <div class="chatbot-img"><img src="images/chatbot.png" alt=""></div>
+    </div>
 
 
 
 
     <script src="main.js"></script>
 </body>
+
 </html>

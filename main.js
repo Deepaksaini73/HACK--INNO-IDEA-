@@ -91,3 +91,38 @@ function trackYourSpending(){
           console.log(`Sorry, we are out of ${adviseNo}.`);
       }
     }
+
+
+    /// change dynamical form as user input
+
+
+    const projectType = document.getElementById('projectType');
+    const organizationType = document.getElementById('organizationType');
+
+    projectType.addEventListener('change', function() {
+        const selectedProject = projectType.value;
+        organizationType.innerHTML = ''; // Clear previous options
+
+        if (selectedProject === 'personal') {
+            const options = ['choose something','Home', 'Kitchen', 'Single Room', 'Other'];
+            options.forEach(option => {
+                const newOption = document.createElement('option');
+                newOption.value = option.toLowerCase().replace(' ', '-');
+                newOption.textContent = option;
+                organizationType.appendChild(newOption);
+            });
+        } else if (selectedProject === 'commercial') {
+            const options = ['choose something','School', 'College', 'Coaching', 'Hospital','other'];
+            options.forEach(option => {
+                const newOption = document.createElement('option');
+                newOption.value = option.toLowerCase().replace(' ', '-');
+                newOption.textContent = option;
+                organizationType.appendChild(newOption);
+            });
+        } else {
+            const defaultOption = document.createElement('option');
+            defaultOption.value = '';
+            defaultOption.textContent = 'Select your organization type';
+            organizationType.appendChild(defaultOption);
+        }
+    });
