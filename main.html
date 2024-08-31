@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
     <title>Smart Budget Advisor</title>
 </head>
 <body>
+
     <header class="header">
         <div class="logo">
-            <h2>Smart Budget <br>Advisor </h2>
+            <h2>Smart  Budget  Advisor </h2>
         </div>
 
         <div class="nav-right">
@@ -32,6 +33,135 @@
         </div>
     </header>
 
-    <script src="script.js"></script>
+
+    <form id="userForm">
+        <div class="project-type-box box">
+        <label for="projectType">What is the type of your project?</label>
+
+        <select id="projectType" name="projectType" required>
+            <option value="" selected>Select your project type</option>
+            <option value="personal">Personal</option>
+            <option value="commercial">Commercial</option>
+        </select>
+    </div>
+        <br><br>
+
+        <!-- Organization Type Dropdown -->
+         <div class="orgna-type-box box">
+        <label for="organizationType">What is the type of your organization?</label>
+        <select id="organizationType" name="organizationType" required>
+            <option value=""  selected>Select your organization type</option>
+            <option value="personal">Personal</option>
+            <option value="public">Public</option>
+        </select>
+    </div>
+        <br><br>
+
+        <!-- Budget Input -->
+         <div class="budgect-box box">
+        <label for="budget">What is your budget?</label>
+        <input type="number" id="budget" name="budget" placeholder="Enter your budget" required>
+        </div><br><br>
+
+        <!-- Location Input -->
+         <div class="location-box box">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" placeholder="Enter your location" required>
+        </div><br><br>
+
+        <!-- Additional Input (Optional) -->
+         <div class="dis-box box">
+        <label for="additionalInfo">Additional Information:</label>
+        <textarea id="additionalInfo" name="additionalInfo" placeholder="Enter any additional information here"></textarea>
+        </div><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="summary" style="display:none;">
+        <h3>Summary</h3>
+        <p id="summaryContent"></p>
+    </div>
+    </div>
+    </form>
+
+
+    <div class="finanical-advise-container">
+        <h1>Smart Money Tips</h1>
+
+        <div class="financial-advise-wrapper">
+            <button><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="display-advise">
+                <h2>Track Your Spending</h2>
+                <p>Regularly review your expenses to identify spending patterns and areas where you can cut back. Tracking your spending helps you stay within budget and ensures you're using your money wisely.</p>
+            </div>
+            <button><i class="fa-solid fa-chevron-right"></i></button>
+
+            <div class="financial-advise">
+                <button id="track" onclick="trackYourSpending()">Track Your Spending</button>
+                <button id="goals" onclick="SetFinancialGoals()">Set Financial Goals</button>
+                <br>
+                <button id="debts" onclick="AvoidHighInterestDebt()">Avoid High-Interest Debt</button>
+                <button id="budget" onclick="CreateaBudge()">Create a Budge</button>
+                <br>
+                <button id="savings" onclick="Savings()">Savings</button>
+                <button id="quality" onclick="QualityofLife()">Quality of Life</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="footer-section">
+        <div class="footer">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <div>Company</div>
+                    <ul class="col-links">
+                        <li><a href="">About</a></li>
+                        <li><a href="">Past users</a></li>
+                        <li><a href="">For the record</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <div>Communities</div>
+                    <ul class="col-links">
+                        <li><a href="">For Engineer</a></li>
+                        <li><a href="">For Architechur </a></li>
+                        <li><a href="">For Investor</a></li>
+                        <li><a href="">For vendors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <div>Usefull Links</div>
+                    <ul class="col-links">
+                        <li><a href="">Support</a></li>
+                        <li><a href="">Free Mobile App</a></li>
+                    </ul>
+                </div>
+                
+
+                <div class="social-links">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="main.js"></script>
 </body>
 </html>

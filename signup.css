@@ -9,7 +9,7 @@
     width: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
     text-align: center;
     margin: 0 auto;
 }
@@ -40,7 +40,6 @@ input {
     margin: 0.25rem;
     min-width: 500px;
     padding: 15px;
-    transition: border-color 0.2s ease-out;
   }
   input:hover{
     border-color: #8BB9FF;
@@ -52,11 +51,10 @@ input {
   .contanier .box form a{
     color: #8BB9FF;
     font-size: 15px;
+    padding:0px 200px;
     font-weight:400;
   }
-  .contanier .box form a:hover{
-    color: #4f92f7;
-  }
+  
   .contanier .box form .btn button{
     margin: 30px 0;
     font-size: 16px;
@@ -69,7 +67,6 @@ input {
     cursor: pointer;
     border: none;
     outline: none;
-    transition: all 0.5s ease;
   }
 
   .contanier .box form button a {
@@ -105,7 +102,8 @@ input {
     cursor: pointer;
   }
   .contanier .box .signup-options .option:hover{
-    border-color: white;
+    border-color: rgb(0,0,0);
+    background: whitesmoke;
   }
   .contanier .box .signup-options .option label{
     margin-top: 5px;
