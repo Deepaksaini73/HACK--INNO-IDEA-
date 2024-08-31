@@ -55,4 +55,5 @@
 .search-input-box #search-input {
     width: 200px;
     padding: 6px 20px;
+    box-shadow: 4px 4px black;
 }
