@@ -21,6 +21,11 @@
     color: black;
 }
 
+.logo h2 {
+    font-size: 40px;
+    line-height: 48px;
+}
+
 .nav-right {
     display: flex;
     align-items: center;
