@@ -129,6 +129,43 @@ form{
     
 }
 
+#summary{
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+#summary .contenier-product{
+    display: flex;
+    padding: 60px;
+    gap: 30px;
+    background: #F3F3FD;
+    justify-content: center;
+    text-align: center;
+}
+#summary .contenier-product .product{
+    text-align: center;
+    background: white;
+    width: 160px;
+    height:150px;
+    padding: 30px;
+    border-radius: 5px;
+}
+#summary .contenier-product .product:hover{
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+
+}
+#summary .contenier-product .product h2{
+    font-size: 20px;
+}
+#summary .contenier-product .product .below-line{
+    
+        width: 80%; /* Width of the line (80% of the parent element's width) */
+        height: 5px; /* Height (thickness) of the line */
+        background-color: #333; /* Color of the line */
+        border: none; /* Remove default border */
+        margin: 20px auto; /* Center the line horizontally and add vertical space */
+}
+
 
 
 
