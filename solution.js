@@ -10,7 +10,7 @@ async function getSolution() {
     const timeline = document.querySelector("#timeline").value;
 
     // Construct the prompt
-    const prompt = `I have a budget of ${budget} and I want to make a ${projectType} in ${location}. Make a simple budget for the project, and also provide a graph based on this data and a table of different components.`;
+    const prompt = `I have a budget of ${budget} and I want to make a ${projectType} in ${location}. Make a simple budget for the project, and also provide a graph based on this data and a table of different components. give all data in a json file or object to acess diffrent value in diffrent place`;
 
     // Show loading animation
     const loading = document.querySelector("#loading");

@@ -71,7 +71,7 @@ function trackYourSpending(){
     function adviseChange(){
     let adviseNo=Math.floor(Math.random()*6);
 
-    switch (adviseNo) {
+    switch (adviseNo) { 
         case 0:
             trackYourSpending();
           break;
@@ -130,3 +130,4 @@ function trackYourSpending(){
             organizationType.appendChild(defaultOption);
         }
     });
+
