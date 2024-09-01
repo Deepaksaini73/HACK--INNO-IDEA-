@@ -116,11 +116,17 @@ form{
     width: 100%;
     height:47px;
 }
-#userForm button{
+#userForm #submit{
     background: rgb(128, 181, 128);
     padding: 12px 60px;
     border-radius: 12px;
     color: white;
+    transition: 0.3s ease-in;
+}
+#userForm #submit:hover{
+    background: rgb(128, 181, 128,0.4);
+    color: #000;
+    
 }
 
 
@@ -273,17 +279,25 @@ form{
 
 
 .chatbot-icon-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: fixed;
     bottom: 60px;
     right: 60px;
-    background: skyblue;
-    border-radius: 46%;
 }
-.chatbot-icon-box .chatbot-img img{
+.chatbot-icon-box{
+    color: #FFdc85;
+}
+.chatbot-icon-box .chatbot-img{
+    background: skyblue;
     width: 50px;
     height: 50px;
-    padding: 5px;
-
+    border-radius: 50%; 
+}
+.chatbot-icon-box .chatbot-img img{
+    width: 100%;
+    height: 100%;
 }
 
 
