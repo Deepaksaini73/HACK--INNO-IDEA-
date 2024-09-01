@@ -42,11 +42,12 @@ async function generateBotResponse(userInput) {
         // Log the entire response to understand its structure
         const apiResponse = data?.candidates[0].content.parts[0].text;
         console.log('API Response:', apiResponse);
+        const apiResponseFormat = apiResponse.replace(/\*/g, '<br/>');
 
         let botResponse = "";
 
         if (apiResponse) {
-            botResponse = apiResponse;
+            botResponse = apiResponseFormat;
         } else {
             botResponse = "Sorry, I didn't understand that.";
         }
