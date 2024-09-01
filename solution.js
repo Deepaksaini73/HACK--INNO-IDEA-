@@ -8,10 +8,9 @@ async function getSolution() {
     const location = document.querySelector("#location").value;
     const area = document.querySelector("#area").value;
     const timeline = document.querySelector("#timeline").value;
-    let temp='';
 
     // Construct the prompt
-    const prompt = `I have a budget of ${budget} and I want to make a ${projectType} in ${location}. Make a simple budget for the project, and also provide a graph based on this data and a table of different components. give all data in a json file or object to acess diffrent value in diffrent place`;
+    const prompt = `I have a budget of ${budget} and I want to make a ${projectType} in ${location} in ${area} . only this is construction related . if i donot give budget then give me a apporiximation budget to make these condition . Make a simple budget for the project.give according india currency`;
 
     // Show loading animation
     const loading = document.querySelector("#loading");
@@ -36,36 +35,14 @@ async function getSolution() {
         }
 
         const data = await response.json();
-        const resultText = data.candidates[0].content.parts[0].text;
+        const result = data.candidates[0].content.parts[0].text;
 
-        // Assuming the API also returns a graph image URL and a table in some structure
-        // Placeholder variables (you will need to adjust according to actual API response)
-        const graphUrl = data.candidates[0].content.parts[0].graphUrl || '';
-        const tableHtml = data.candidates[0].content.parts[0].tableHtml || '';
-
-        // Display the summary text
+        // Display formatted summary
         const summaryContent = document.querySelector("#summaryContent");
         summaryContent.innerHTML = `
             <h3>Project Budget Summary</h3>
-            <p>${resultText}</p>
+            <p>${result.replace(/\*\*/g, '<strong>').replace(/\n/g, '<br>').replace(/<\/strong><br>/g, '</strong><br><br>')}</p>
         `;
-
-        // Display the graph if available
-        if (graphUrl) {
-            summaryContent.innerHTML += `
-                <h3>Project Budget Graph</h3>
-                <img src="${graphUrl}" alt="Budget Graph" style="max-width: 100%;">
-            `;
-        }
-
-        // Display the table if available
-        if (tableHtml) {
-            summaryContent.innerHTML += `
-                <h3>Component Table</h3>
-                <div>${tableHtml}</div>
-            `;
-        }
-
         document.querySelector("#summary").style.display = "block";
 
     } catch (error) {
@@ -78,13 +55,10 @@ async function getSolution() {
     }
 }
 
-
-
 document.querySelector("#submit").addEventListener("click", (event) => {
     event.preventDefault(); // Prevent the form from submitting
     getSolution();
 });
-
 
 
 // const data = JSON.parse(jsonData);
