@@ -8,6 +8,7 @@ async function getSolution() {
     const location = document.querySelector("#location").value;
     const area = document.querySelector("#area").value;
     const timeline = document.querySelector("#timeline").value;
+    let temp='';
 
     // Construct the prompt
     const prompt = `I have a budget of ${budget} and I want to make a ${projectType} in ${location}. Make a simple budget for the project, and also provide a graph based on this data and a table of different components. give all data in a json file or object to acess diffrent value in diffrent place`;
@@ -46,7 +47,7 @@ async function getSolution() {
         const summaryContent = document.querySelector("#summaryContent");
         summaryContent.innerHTML = `
             <h3>Project Budget Summary</h3>
-            <p>${resultText.replace(/\*\*/g, '<strong>').replace(/\n/g, '<br>').replace(/<\/strong><br>/g, '</strong><br><br>')}</p>
+            <p>${resultText}</p>
         `;
 
         // Display the graph if available
@@ -77,7 +78,49 @@ async function getSolution() {
     }
 }
 
+
+
 document.querySelector("#submit").addEventListener("click", (event) => {
     event.preventDefault(); // Prevent the form from submitting
     getSolution();
 });
+
+
+
+// const data = JSON.parse(jsonData);
+
+// // Access the components
+// const components = data.components;
+    
+//             // Clear previous content
+//             const summaryContent = document.querySelector("#summaryContent");
+//             summaryContent.innerHTML = '';
+    
+//             // Display components dynamically
+//             const container = document.getElementById('container-product');
+//             container.innerHTML = '';  // Clear previous content
+    
+//             components.forEach(component => {
+//                 // Create product div
+//                 const productDiv = document.createElement('div');
+//                 productDiv.className = 'product';
+    
+//                 // Create h2 element for cost
+//                 const h2 = document.createElement('h2');
+//                 h2.textContent = `₹${component.cost}`;
+//                 productDiv.appendChild(h2);
+    
+//                 // Create hr element
+//                 const hr = document.createElement('hr');
+//                 hr.className = 'bellow-line';
+//                 productDiv.appendChild(hr);
+    
+//                 // Create p element for product name
+//                 const p = document.createElement('p');
+//                 p.textContent = component.name;
+//                 productDiv.appendChild(p);
+    
+//                 // Append product div to container
+//                 container.appendChild(productDiv);
+//             });
+    
