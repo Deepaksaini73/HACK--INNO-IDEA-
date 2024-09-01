@@ -4,13 +4,14 @@ async function getSolution() {
 
     // Get the values from the form
     const projectType = document.querySelector("#projectType").value;
+    const organizationType = document.querySelector("#organizationType").value;
     const budget = document.querySelector("#budget").value;
     const location = document.querySelector("#location").value;
     const area = document.querySelector("#area").value;
     const timeline = document.querySelector("#timeline").value;
 
     // Construct the prompt
-    const prompt = `I have a budget of ${budget} and I want to make a ${projectType} in ${location} in ${area} . only this is construction related . if i donot give budget then give me a apporiximation budget to make these condition . Make a simple budget for the project.give according india currency`;
+    const prompt = `I have a budget of ${budget} indian rupees and I want to make a ${projectType} ${organizationType} in ${location} in ${area} . I’m giving you a specific budget. Please suggest how to allocate it among different domains. Provide specific percentages and details, using Indian currency. If the budget seems insufficient for a proper structure, please advise on the necessary increase`;
 
     // Show loading animation
     const loading = document.querySelector("#loading");
